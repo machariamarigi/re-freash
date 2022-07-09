@@ -4,3 +4,9 @@ export interface ITodo {
     description: string;
     status: boolean;
 }
+
+export type TodoContextType = {
+    todos: ITodo[];
+    saveTodo: (todo: ITodo) => void;
+    completeTodo: (id: number) => void;
+}
