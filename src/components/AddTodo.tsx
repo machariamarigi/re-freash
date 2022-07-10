@@ -18,7 +18,7 @@ const AddTodo: React.FC = () => {
         saveTodo(formData);
     }
     return (
-        <form className="form" onSubmit={(e) => handleSaveTodo(e, formData)}>
+        <form className="Form" onSubmit={(e) => handleSaveTodo(e, formData)}>
             <div>
                 <div>
                     <label htmlFor="name">Title</label>
