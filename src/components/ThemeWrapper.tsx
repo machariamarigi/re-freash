@@ -20,6 +20,7 @@ const ThemeWrapper: React.FC<Props> = ({ children }) => {
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
             </select>
+            {children}
         </div>
     )
 }
