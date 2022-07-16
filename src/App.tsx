@@ -1,8 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.css';
+import { Routes as appRoutes } from './routes';
 import TodoProvider from './context/todoContext';
-import AddTodo from './components/AddTodo';
-import Todos from './containers/Todos';
 import ThemeProvider from './context/themeContext';
 import ThemeWrapper from './components/ThemeWrapper';
 
@@ -12,9 +12,19 @@ function App() {
       <TodoProvider>
         <ThemeWrapper>
           <main className='App'>
-            <h1>My Todos</h1>
-            <AddTodo />
-            <Todos />
+            <Router>
+              <Routes>
+                {
+                  appRoutes.map((route) => (
+                    <Route
+                      key={route.path}
+                      path={route.path}
+                      element={ <route.component /> }
+                    />
+                  ))
+                }
+              </Routes>
+            </Router>
           </main>
         </ThemeWrapper>
       </TodoProvider>
