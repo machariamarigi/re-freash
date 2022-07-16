@@ -6,6 +6,7 @@ const RehookPage: FC<any> = (): ReactElement => {
     return (
         <div>
             <h1>useState</h1>
+            <UseStateComponent />
         </div>
     )
 }
