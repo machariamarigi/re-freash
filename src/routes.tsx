@@ -1,5 +1,6 @@
 import { Route } from "./@types/route";
 import HomePage from "./pages/HomePage";
+import RehookPage from "./pages/RehookPage";
 import TodoPage from "./pages/TodosPage";
 
 export const Routes: Array<Route> = [
@@ -15,5 +16,11 @@ export const Routes: Array<Route> = [
         path: '/todos',
         enabled: true,
         component: TodoPage
+    }, {
+        key: 'rehook-route',
+        title: 'Rehook',
+        path: '/rehook',
+        enabled: true,
+        component: RehookPage
     }
 ]
