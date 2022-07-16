@@ -28,10 +28,6 @@
   margin: 4rem auto;
 }
 
-.App > h1 {
-  text-align: center;
-  margin: 1rem 0;
-}
 
 [data-theme='dark'] .Card {
   background: #292828;
