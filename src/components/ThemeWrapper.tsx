@@ -15,8 +15,8 @@ const ThemeWrapper: React.FC<Props> = ({ children }) => {
     }
 
     return (
-        <div data-theme={theme}>
-            <select name="toggleTheme" onChange={handleThemeChange}>
+        <div className="Theme-wrapper" data-theme={theme}>
+            <select className="Theme-toggler" name="toggleTheme" onChange={handleThemeChange}>
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
             </select>
