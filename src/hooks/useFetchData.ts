@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Beverage } from "../@types/beverage";
 
-const useFetchData = (url: string) : {
-    data: Beverage[] | null;
+
+const useFetchData = <Payload> (url: string) : {
+    data: Payload | null;
     done: boolean;
 } => {
-    const [data, dataSet] = useState<Beverage[]>([]);
+    const [data, dataSet] = useState<Payload | null>(null);
     const [done, doneSet] = useState(false);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const useFetchData = (url: string) : {
             .then((resp) =>{
                 return resp.json()
             })
-            .then((respData: Beverage[]) => {
+            .then((respData: Payload) => {
                 dataSet(respData);
                 doneSet(true);
             })

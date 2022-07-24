@@ -1,9 +1,9 @@
 import React from 'react';
+import { Beverage } from '../@types/beverage';
 import useFetchData from "../hooks/useFetchData"
 
 const CustomHookComponent = () => {
-    const { data, done } = useFetchData("/data/hv-taplist.json");
-    console.log(data);
+    const { data, done } = useFetchData<Beverage[]>("/data/hv-taplist.json");
     return(
         <div>
             { done && (
